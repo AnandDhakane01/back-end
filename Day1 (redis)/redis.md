@@ -1,6 +1,6 @@
 * redis-cli
 
-{
+* {
     name: "anand",
     place: "pune"
 }

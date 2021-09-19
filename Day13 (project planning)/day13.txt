@@ -1,0 +1,33 @@
+
+
+PLANNING A PROJECT/FEATURE <- (most important)
+
+=> Requirement gathering
+
+	* traffic per second
+
+	* budget
+
+	* react/node when more than 1 lakh active users approx
+
+-> minimum no. of api calls (performance)
+-> performance, security, edge cases
+
+
+Waterfall model (depricated)
+Agile Methodology
+	-> sprints
+	-> prd 
+
+
+to read about :-
+	* pagination
+	* virtualization
+
+
+
+
+
+
+
+

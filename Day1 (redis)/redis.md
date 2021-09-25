@@ -31,7 +31,7 @@
 
 
 # Postgres
-* psql -U postgres
+* sudo -u postgres psql
 * CREATE USER username WITH PASSWORD 'password'
 * CREATE DATABASE db
 * GRAND ALL PRIVILAGES ON DATABASE db to username

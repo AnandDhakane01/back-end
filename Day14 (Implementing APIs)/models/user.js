@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize')
 const sequelize = require('../database/index')
 
 const User = sequelize.define('User', {
-    fullName: {
+    username: {
         type: DataTypes.STRING,
         allowNull: false
     }, 
@@ -13,6 +13,10 @@ const User = sequelize.define('User', {
     },
 
     password: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    role: {
         type: DataTypes.STRING,
         allowNull: false
     }

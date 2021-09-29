@@ -9,6 +9,8 @@ const { redisClient, RedisStore, session } = require("./database/redis");
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const { urlencoded } = require('express');
+var passport = require('passport');
+const { RequestTimeout } = require('http-errors');
 
 var app = express();
 
@@ -23,6 +25,8 @@ app.use(session({
     maxAge: 1000 * 60 * 10
   }
 }))
+app.use(passport.initialize());
+require("./middlewares/passport")(passport)
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -36,6 +40,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/passport', require('./routes/passport'))
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -10,7 +10,6 @@ router.get("/", (req, res) => {
 });
 
 router.post("/payment", async (req, res) => {
-  console.log(req.body);
   try {
     // Create Checkout Sessions from body params.
     const session = await stripe.checkout.sessions.create({
@@ -27,7 +26,6 @@ router.post("/payment", async (req, res) => {
       success_url: `${req.headers.origin}?success=true&session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${req.headers.origin}?canceled=true`,
     });
-    console.log(session);
     res.redirect(303, session.url);
   } catch (err) {
     res.status(err.statusCode || 500).json(err.message);

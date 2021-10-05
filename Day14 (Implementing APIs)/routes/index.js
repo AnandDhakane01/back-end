@@ -2,14 +2,14 @@ var express = require("express");
 const { register, registerSuperAdmin } = require("../controllers/register");
 var router = express.Router();
 var registerInitialChecks = require("../middlewares/registerChecks");
-const check = require("../middlewares/checkSuperAdmin")
+const check = require("../middlewares/checkSuperAdmin");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
   // const sess = req.session;
   // sess.username = "anand";
   // console.log(sess);
-  res.render("index", { title: "Express" });
+  res.render("index", { thas: "tha14-tha16" });
 });
 
 /**

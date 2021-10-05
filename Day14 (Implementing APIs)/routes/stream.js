@@ -9,6 +9,7 @@ router.get("/", (req, res) => {
 
 router.get("/video", (req, res) => {
   const range = req.headers.range;
+  console.log(range);
   if (!range) {
     res.status(400).send("Range is required");
   }

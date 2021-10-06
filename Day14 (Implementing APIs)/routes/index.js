@@ -9,7 +9,7 @@ router.get("/", function (req, res, next) {
   // const sess = req.session;
   // sess.username = "anand";
   // console.log(sess);
-  res.render("index", { thas: "tha14-tha16" });
+  res.render("index", { thas: "tha14-tha18" });
 });
 
 /**
